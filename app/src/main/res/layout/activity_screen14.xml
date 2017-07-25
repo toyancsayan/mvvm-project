@@ -1,0 +1,44 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.generalmobile.mvvm_project.screens.screen14.Screen14ViewModel" />
+    </data>
+
+
+    <android.support.v4.widget.DrawerLayout
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ebedf0"
+        android:fitsSystemWindows="true"
+        tools:context=".screens.screen14.Screen14Activity">
+
+        <include
+            android:id="@+id/navigation"
+            layout="@layout/navigation_view" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:padding="8dp"
+                app:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/item_data14"/>
+        </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
+</layout>
