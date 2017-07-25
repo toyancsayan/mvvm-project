@@ -8,9 +8,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.generalmobile.mvvm_project.MainApp;
 import com.example.generalmobile.mvvm_project.R;
-import com.example.generalmobile.mvvm_project.entity.Product;
+import com.example.generalmobile.mvvm_project.model.Product;
 
 import java.util.List;
 

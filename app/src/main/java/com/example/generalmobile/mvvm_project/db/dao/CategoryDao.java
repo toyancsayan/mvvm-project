@@ -7,7 +7,6 @@ import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 
 import com.example.generalmobile.mvvm_project.model.Category;
-import com.example.generalmobile.mvvm_project.model.Product;
 
 import java.util.List;
 
@@ -16,10 +15,10 @@ import java.util.List;
  */
 
 @Dao
-public interface ProductDao {
+public interface CategoryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertProduct(List<Product> product);
+    void insertCategory(List<Category> category);
 
-    @Query("select * from product")
-    LiveData<List<Product>> getProducts();
+    @Query("select * from category")
+    LiveData<List<Category>> getCategories();
 }

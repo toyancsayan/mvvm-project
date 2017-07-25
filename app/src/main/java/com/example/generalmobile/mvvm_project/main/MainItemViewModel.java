@@ -4,13 +4,13 @@ import android.databinding.ObservableField;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.generalmobile.mvvm_project.entity.Product;
+import com.example.generalmobile.mvvm_project.model.Product;
 
 /**
  * Created by btstajyer7 on 24.07.2017.
  */
 
-public class ProductViewModel {
+public class MainItemViewModel {
 
     private ObservableField<Product> product = new ObservableField<>();
 

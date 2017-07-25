@@ -7,7 +7,7 @@
 
         <variable
             name="model"
-            type="com.example.generalmobile.mvvm_project.main.ProductViewModel" />
+            type="com.example.generalmobile.mvvm_project.main.MainItemViewModel" />
     </data>
 
     <LinearLayout

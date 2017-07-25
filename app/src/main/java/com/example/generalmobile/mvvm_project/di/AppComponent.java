@@ -4,7 +4,8 @@ import android.arch.persistence.room.Dao;
 import android.content.Context;
 
 import com.example.generalmobile.mvvm_project.db.Database;
-import com.example.generalmobile.mvvm_project.rest.ProductService;
+import com.example.generalmobile.mvvm_project.rest.APIService;
+
 
 import javax.inject.Singleton;
 
@@ -21,5 +22,5 @@ public interface AppComponent {
 
     Database database();
 
-    ProductService productservice();
+    APIService apiservice();
 }

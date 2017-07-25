@@ -1,4 +1,4 @@
-package com.example.generalmobile.mvvm_project.main;
+package com.example.generalmobile.mvvm_project.screens.screen14;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
@@ -6,6 +6,8 @@ import android.arch.lifecycle.LiveData;
 
 import com.example.generalmobile.mvvm_project.MainApp;
 import com.example.generalmobile.mvvm_project.db.Database;
+import com.example.generalmobile.mvvm_project.main.DaggerMainComponent;
+import com.example.generalmobile.mvvm_project.model.Category;
 import com.example.generalmobile.mvvm_project.model.Product;
 import com.example.generalmobile.mvvm_project.rest.APIService;
 
@@ -21,48 +23,49 @@ import retrofit2.Response;
  * Created by btstajyer7 on 24.07.2017.
  */
 
-public class MainViewModel extends AndroidViewModel {
-    private LiveData<List<Product>> productList;
+public class Screen14ViewModel extends AndroidViewModel {
+    private LiveData<List<Category>> categoryList;
 
     @Inject
     Database database;
     @Inject
-    APIService productService;
+    APIService service;
 
-    public MainViewModel(Application application) {
+    public Screen14ViewModel(Application application) {
         super(application);
 
         DaggerMainComponent.builder()
                 .appComponent(((MainApp)getApplication()).getAppComponent())
                 .build()
-                .inject(this);
+                .inject14(this);
+    }
+    public LiveData<List<Category>> getCategoryList() {
+        if (categoryList == null)
+            categoryList = getCategories();
+
+        return categoryList;
     }
 
-    public LiveData<List<Product>> getProductList() {
-        if (productList == null)
-            productList = getProducts();
-
-        return productList;
-    }
-
-    public LiveData<List<Product>> getProducts() {
-        productService.getProductData().enqueue(new Callback<List<Product>>() {
+    private LiveData<List<Category>> getCategories() {
+        service.getCategoryData().enqueue(new Callback<List<Category>>() {
             @Override
-            public void onResponse(Call<List<Product>> call, final Response<List<Product>> response) {
+            public void onResponse(Call<List<Category>> call, final Response<List<Category>> response) {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        database.productDao().insertProduct(response.body());
+                        database.categoryDao().insertCategory(response.body());
                     }
                 }).start();
             }
 
             @Override
-            public void onFailure(Call<List<Product>> call, Throwable t) {
+            public void onFailure(Call<List<Category>> call, Throwable t) {
                 t.printStackTrace();
             }
         });
 
-        return database.productDao().getProducts();
+        return database.categoryDao().getCategories();
     }
-}
+
+    }
+

@@ -1,4 +1,4 @@
-package com.example.generalmobile.mvvm_project.entity;
+package com.example.generalmobile.mvvm_project.model;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;

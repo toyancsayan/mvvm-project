@@ -1,6 +1,6 @@
 package com.example.generalmobile.mvvm_project.di;
 
-import com.example.generalmobile.mvvm_project.rest.ProductService;
+import com.example.generalmobile.mvvm_project.rest.APIService;
 
 import javax.inject.Singleton;
 
@@ -16,11 +16,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ServiceModule {
     @Singleton
     @Provides
-    ProductService provideService() {
+    APIService provideService() {
         return new Retrofit.Builder()
                 .baseUrl("http://10.17.0.131:3000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-                .create(ProductService.class);
+                .create(APIService.class);
     }
 }

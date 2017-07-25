@@ -4,13 +4,11 @@ import android.databinding.DataBindingComponent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.generalmobile.mvvm_project.R;
 import com.example.generalmobile.mvvm_project.databinding.ItemProductsBinding;
-import com.example.generalmobile.mvvm_project.db.Database;
-import com.example.generalmobile.mvvm_project.entity.Product;
+import com.example.generalmobile.mvvm_project.model.Product;
 
 import java.util.List;
 
@@ -35,7 +33,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
                 false,
                 bindingComponent);
 
-        binding.setModel(new ProductViewModel());
+        binding.setModel(new MainItemViewModel());
 
         return new ViewHolder(binding);
     }

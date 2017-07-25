@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item1"
+            android:checkable="false"
+            android:icon="@drawable/ic_fiber_manual_record_black_24dp"
+            android:title="@string/menu_item_str" />
+
+        <item
+            android:id="@+id/item2"
+            android:checkable="false"
+            android:icon="@drawable/ic_fiber_manual_record_black_24dp"
+            android:title="@string/menu_item_str" />
+
+        <item
+            android:id="@+id/item3"
+            android:checkable="false"
+            android:icon="@drawable/ic_fiber_manual_record_black_24dp"
+            android:title="@string/menu_item_str" />
+    </group>
+
+    <item android:title="@string/subheader">
+
+        <menu>
+            <item
+                android:id="@+id/item4"
+                android:checkable="false"
+                android:icon="@drawable/ic_fiber_manual_record_black_24dp"
+                android:title="@string/menu_item_str" />
+            <item
+                android:id="@+id/item5"
+                android:checkable="false"
+                android:icon="@drawable/ic_fiber_manual_record_black_24dp"
+                android:title="@string/menu_item_str" />
+        </menu>
+
+    </item>
+
+
+</menu>
