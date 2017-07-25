@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:name=".MainApp"
         android:theme="@style/AppTheme">
-        <activity android:name=".screens.screen14.Screen14Activity">
+        <activity android:name=".screens.screen13.Screen13Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

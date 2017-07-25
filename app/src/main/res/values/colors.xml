@@ -10,4 +10,5 @@
     <color name="drawerEmailColor">#FFFFFF</color>
 
     <color name="checkoutButtonBackground">#FF5252</color>
+    <color name="mountainBackgroundColor">#BBBFC4</color>
 </resources>

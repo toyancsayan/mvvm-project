@@ -35,10 +35,11 @@ public class Screen14ViewModel extends AndroidViewModel {
         super(application);
 
         DaggerMainComponent.builder()
-                .appComponent(((MainApp)getApplication()).getAppComponent())
+                .appComponent(((MainApp) getApplication()).getAppComponent())
                 .build()
                 .inject14(this);
     }
+
     public LiveData<List<Category>> getCategoryList() {
         if (categoryList == null)
             categoryList = getCategories();
@@ -67,5 +68,5 @@ public class Screen14ViewModel extends AndroidViewModel {
         return database.categoryDao().getCategories();
     }
 
-    }
+}
 

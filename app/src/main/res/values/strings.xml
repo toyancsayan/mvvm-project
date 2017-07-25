@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MvvmProject</string>
+    <string name="app_name">MVVM Example</string>
     <string name="menu_item_str">Menu item</string>
     <string name="drawer_open">A</string>
     <string name="drawer_close">B</string>
@@ -7,5 +7,10 @@
     <string name="search">Search</string>
     <string name="shopping_cart">Shopping Cart</string>
     <string name="subheader">Subheader</string>
-    <string name="checkout_button">BUTTON</string>
+    <string name="checkout_button">PROCEED TO CHECKOUT</string>
+    <string name="default_product_name">Product</string>
+    <string name="default_product_price">$100</string>
+    <string name="default_product_quantity">1</string>
+    <string name="your_basket">Your Basket</string>
+    <string name="total_checkout">Total</string>
 </resources>

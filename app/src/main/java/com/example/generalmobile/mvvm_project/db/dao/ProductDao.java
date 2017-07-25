@@ -22,4 +22,7 @@ public interface ProductDao {
 
     @Query("select * from product")
     LiveData<List<Product>> getProducts();
+
+    @Query("select * from product order by random() limit 1")
+    LiveData<List<Product>> randomItem();
 }

@@ -49,7 +49,7 @@ public class Screen14Adapter extends RecyclerView.Adapter<Screen14Adapter.ViewHo
         holder.itemData14Binding.getModel().setCategory(categories.get(position));
         Picasso.with(holder.imageView.getContext())
                 .load(categories.get(position)
-                .getCatgoryImageUrl())
+                        .getCatgoryImageUrl())
                 .fit()
                 .centerCrop()
                 .into(holder.imageView);
@@ -67,7 +67,7 @@ public class Screen14Adapter extends RecyclerView.Adapter<Screen14Adapter.ViewHo
         public ViewHolder(ItemData14Binding itemData14Binding) {
             super(itemData14Binding.getRoot());
             this.itemData14Binding = itemData14Binding;
-            imageView=(ImageView) itemData14Binding.getRoot().findViewById(R.id.item_image14);
+            imageView = (ImageView) itemData14Binding.getRoot().findViewById(R.id.item_image14);
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.example.generalmobile.mvvm_project.model;
 
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
 import com.google.gson.annotations.Expose;
@@ -11,7 +12,7 @@ public class Product {
     @PrimaryKey
     @SerializedName("id")
     @Expose
-    private Integer id;
+    private Integer productId;
     @SerializedName("name")
     @Expose
     private String name;
@@ -41,14 +42,14 @@ public class Product {
     private String colorVariant;
     @SerializedName("imageUrl")
     @Expose
-    private String imageUrl;
+    private String productImageUrl;
 
-    public Integer getId() {
-        return id;
+    public Integer getProductId() {
+        return productId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setProductId(Integer productId) {
+        this.productId = productId;
     }
 
     public String getName() {
@@ -123,16 +124,16 @@ public class Product {
         this.colorVariant = colorVariant;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getProductImageUrl() {
+        return productImageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setProductImageUrl(String productImageUrl) {
+        this.productImageUrl = productImageUrl;
     }
 
     @Override
     public boolean equals(Object obj) {
-        return obj != null && obj instanceof Product && this.id.equals(((Product) obj).getId());
+        return obj != null && obj instanceof Product && this.productId.equals(((Product) obj).getProductId());
     }
 }

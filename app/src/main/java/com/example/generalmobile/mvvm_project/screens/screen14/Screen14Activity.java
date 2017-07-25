@@ -3,6 +3,7 @@ package com.example.generalmobile.mvvm_project.screens.screen14;
 import android.arch.lifecycle.LifecycleActivity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.databinding.DataBindingComponent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import com.example.generalmobile.mvvm_project.R;
 import com.example.generalmobile.mvvm_project.base.BaseActivity;
 import com.example.generalmobile.mvvm_project.model.Category;
+import com.example.generalmobile.mvvm_project.screens.screen13.Screen13Activity;
 
 import java.util.List;
 
@@ -48,7 +50,6 @@ public class Screen14Activity extends BaseActivity implements android.databindin
                 fillRecycler(categories);
             }
         });
-
     }
 
     private void fillRecycler(List<Category> categories) {
