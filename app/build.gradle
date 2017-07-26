@@ -47,4 +47,5 @@ dependencies {
     annotationProcessor 'android.arch.persistence.room:compiler:1.0.0-alpha3'
     annotationProcessor 'android.arch.lifecycle:compiler:1.0.0-alpha3'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+    compile 'com.github.elton2048:SmoothCheckBox:1.0.1'
 }
