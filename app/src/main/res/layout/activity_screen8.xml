@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.generalmobile.mvvm_project.screens.screen8.Screen8ItemViewModel" />
+    </data>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/AppTheme."
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rw8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_data8"
+                app:layoutManager="LinearLayoutManager"></android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/navigation"
+            layout="@layout/navigation_view" />
+    </android.support.v4.widget.DrawerLayout>
+</layout>

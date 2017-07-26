@@ -26,7 +26,6 @@ import java.util.List;
 public class Screen14Activity extends BaseActivity implements android.databinding.DataBindingComponent {
 
     DrawerLayout drawerLayout;
-
     RecyclerView recyclerView;
     Toolbar toolbar;
 

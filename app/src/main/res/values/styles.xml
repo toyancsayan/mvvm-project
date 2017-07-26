@@ -9,6 +9,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme." parent="Theme.AppCompat.Light.NoActionBar"></style>
+
     <style name="NavigationTheme">
         <item name="android:textColor">@color/drawerItemTextColor</item>
         <item name="android:fontFamily">sans-serif-medium</item>
@@ -22,4 +24,5 @@
     <style name="DrawerArrowStyle" parent="ThemeOverlay.AppCompat.ActionBar">
     <item name="android:color">#FFFFFF</item>
 </style>
+    <style name="customRatingBar" parent="Base.Widget.AppCompat.RatingBar.Small"></style>
 </resources>

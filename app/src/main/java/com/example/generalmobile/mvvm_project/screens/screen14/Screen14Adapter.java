@@ -53,6 +53,7 @@ public class Screen14Adapter extends RecyclerView.Adapter<Screen14Adapter.ViewHo
                 .fit()
                 .centerCrop()
                 .into(holder.imageView);
+
     }
 
     @Override

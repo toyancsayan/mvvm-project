@@ -10,4 +10,23 @@
     <color name="drawerEmailColor">#FFFFFF</color>
 
     <color name="checkoutButtonBackground">#FF5252</color>
-</resources>
+
+
+        <color name="red">#FF0000</color>
+
+        <color name="grey">#696969</color>
+    <color name="white">#FDFEFE</color>
+
+        <color name="divider">#EAEDED  </color>
+
+        <color name="mountains">#BBBFC4</color>
+
+
+
+
+    </resources>
+
+
+
+
+
