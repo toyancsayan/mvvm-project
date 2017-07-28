@@ -44,7 +44,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="?android:attr/listPreferredItemHeight"
                     android:ems="10"
-                    android:hint="SomeText" />
+                    android:hint="SomeText"
+                    android:text="@={model.editText1}" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -58,7 +59,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="?android:attr/listPreferredItemHeight"
                     android:ems="10"
-                    android:hint="SomeText" />
+                    android:hint="SomeText"
+                    android:text="@={model.editText2}" />
             </android.support.design.widget.TextInputLayout>
 
             <TextView
@@ -119,6 +121,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_weight="1"
+                        android:entries="@{model.options}"
+                        android:selectedItemPosition="@={model.position}"
                         android:text="Options" />
 
                     <Spinner
@@ -127,6 +131,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_weight="1"
+                        android:entries="@{model.options}"
+                        android:selectedItemPosition="@={model.position}"
                         android:text="Options" />
 
 
@@ -143,8 +149,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="#FF5252"
+                        android:checked="@={model.checked}"
                         android:fontFamily="sans-serif"
-                        android:text="Choose"
+                        android:text="Choose1"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textSize="16sp" />
@@ -158,7 +165,7 @@
                         android:layout_toEndOf="@+id/checkbox1"
                         android:buttonTint="#FF5252"
                         android:fontFamily="sans-serif"
-                        android:text="Choose"
+                        android:text="Choose2"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textSize="16sp" />
@@ -190,7 +197,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_toEndOf="@+id/scb"
                         android:fontFamily="sans-serif"
-                        android:text="Choose"
+                        android:text="Choose3"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textSize="16sp" />
@@ -203,7 +210,7 @@
                         android:layout_marginTop="16dp"
                         android:layout_toEndOf="@+id/scb2"
                         android:fontFamily="sans-serif"
-                        android:text="Choose"
+                        android:text="Choose4"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textSize="16sp" />
@@ -239,6 +246,7 @@
                     android:layout_gravity="bottom"
                     android:layout_weight="1"
                     android:backgroundTint="#FF5252"
+                    android:onClick="@{() -> model.b1Clicked()}"
                     android:text="Button"
                     android:textColor="#FFFFFF" />
             </LinearLayout>

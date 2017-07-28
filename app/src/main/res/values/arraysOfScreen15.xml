@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="options_array">
+        <item>CHOOSE OPTION FROM XML</item>
         <item>Option1</item>
         <item>Option2</item>
         <item>Option3</item>

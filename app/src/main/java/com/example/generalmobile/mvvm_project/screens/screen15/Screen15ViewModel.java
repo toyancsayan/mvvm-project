@@ -2,6 +2,7 @@ package com.example.generalmobile.mvvm_project.screens.screen15;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.content.Context;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.databinding.BindingAdapter;
@@ -20,8 +21,11 @@ import android.widget.SpinnerAdapter;
 import android.widget.Toast;
 
 import com.example.generalmobile.mvvm_project.BR;
+import com.example.generalmobile.mvvm_project.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Observable;
 
@@ -35,19 +39,52 @@ import java.util.Observable;
 
 
 public class Screen15ViewModel extends BaseObservable {
-
-    private String[] options = new String[]{"Option1", "Option2", "Option3", "Option4", "Option5", "Option6", "Option7"};
+    private ArrayList<String> options = new ArrayList<String>();
     private String option;
+    Context context;
     private int position;
-    Screen15Activity activity = new Screen15Activity();
+    private boolean checked;
 
+
+    public ObservableField<String> editText1 = new ObservableField<>("");
+    public ObservableField<String> editText2 = new ObservableField<>("");
+
+    public void b1Clicked() {
+        options.add(editText1.get().toString());
+        editText1.set("");
+
+
+    }
+
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
+
+    public Screen15ViewModel(Context context) {
+        this.context = context;
+        options.addAll(Arrays.asList(context.getResources().getStringArray(R.array.options_array)));
+    }
+
+
+    public Context getContext() {
+        return context;
+    }
+
+    public void setContext(Context context) {
+        this.context = context;
+    }
 
     @Bindable
-    public String[] getOptions() {
+    public ArrayList<String> getOptions() {
         return options;
     }
 
-    public void setOptions(String[] countries) {
+    public void setOptions(ArrayList<String> countries) {
         this.options = countries;
 
     }
@@ -61,7 +98,7 @@ public class Screen15ViewModel extends BaseObservable {
         this.position = position;
 
         if (position != 0)
-            setOption(options[position]);
+            setOption(options.get(position));
     }
 
     @Bindable
@@ -70,9 +107,16 @@ public class Screen15ViewModel extends BaseObservable {
     }
 
 
-    public void setOption(String country) {
-        this.option = country;
-        activity.makeToast(country);
+    public void setOption(String option) {
+        this.option = option;
+
+        if (checked) {
+            Toast.makeText(context, option + " is selected", Toast.LENGTH_SHORT).show();
+            //  messenger.makeToast(country);
+
+        } else
+            Toast.makeText(context, option + " is NOT selected", Toast.LENGTH_SHORT).show();
+
     }
 
     public int getPosition(Spinner spinner) {

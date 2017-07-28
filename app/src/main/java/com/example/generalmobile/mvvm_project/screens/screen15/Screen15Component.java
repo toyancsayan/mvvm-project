@@ -5,4 +5,6 @@ package com.example.generalmobile.mvvm_project.screens.screen15;
  */
 
 public interface Screen15Component {
+
+
 }
